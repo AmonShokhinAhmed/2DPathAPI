@@ -14,7 +14,7 @@ jobs:
       - uses: "finnp/create-file-action@master"
       env:
         FILE_NAME: "docs/index.html"
-        FILE_DATA: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n\n<head>\n<meta http-equiv=Refresh content=\"0;url=html/index.html\">\n</head>\n\n</html>"
+        FILE_DATA: "test"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
