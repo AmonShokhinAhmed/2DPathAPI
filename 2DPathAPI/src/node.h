@@ -2,6 +2,11 @@
 #include "pathfinder.h"
 #include <vector>
 namespace PathAPI {
+    /// Node class for use by the PathFinder class
+    /**
+     * Stores ids of other nodes it is connected to. Those ids are getting set during creation by
+     * the PathFinder and correspond to the node's position in the map member variable of PathFinder
+     */
     class Node {
       public:
         /// Getter for the node's id.
