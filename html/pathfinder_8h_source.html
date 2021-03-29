@@ -73,21 +73,21 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_path_a_p_i.html">PathAPI</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span>Node;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">class </span>Node;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_path_a_p_i_1_1_path_finder.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_path_a_p_i_1_1_path_finder.html">PathFinder</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_path_a_p_i_1_1_path_finder.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_path_a_p_i_1_1_path_finder.html">PathFinder</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_path_a_p_i_1_1_path_finder.html#ac554a8febd5a5d7fd59a3c1c0e9adc3c">PathFinder</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_path_a_p_i_1_1_path_finder.html#ac554a8febd5a5d7fd59a3c1c0e9adc3c">PathFinder</a>();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_path_a_p_i_1_1_node.html">Node</a> *<a class="code" href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b">AddNode</a>(<span class="keyword">const</span> std::vector&lt;uint32_t&gt; &amp;connections);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_path_a_p_i_1_1_node.html">Node</a> *<a class="code" href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b">AddNode</a>(<span class="keyword">const</span> std::vector&lt;uint32_t&gt; &amp;connections);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_path_a_p_i_1_1_node.html">Node</a> *<a class="code" href="class_path_a_p_i_1_1_path_finder.html#a6caec6f5e6c56f42f46b88c7131e6041">GetNode</a>(uint32_t <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint32_t <a class="code" href="class_path_a_p_i_1_1_path_finder.html#af6721eed778f56de395424543184cd34">GetMapSize</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_path_a_p_i_1_1_node.html">Node</a> *<a class="code" href="class_path_a_p_i_1_1_path_finder.html#a6caec6f5e6c56f42f46b88c7131e6041">GetNode</a>(uint32_t <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        uint32_t <a class="code" href="class_path_a_p_i_1_1_path_finder.html#af6721eed778f56de395424543184cd34">GetMapSize</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt;Node *&gt; map;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;Node *&gt; map;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    };</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <span class="comment">// namespace PathAPI</span></div>
 <div class="ttc" id="aclass_path_a_p_i_1_1_node_html"><div class="ttname"><a href="class_path_a_p_i_1_1_node.html">PathAPI::Node</a></div><div class="ttdef"><b>Definition:</b> node.h:5</div></div>
 <div class="ttc" id="aclass_path_a_p_i_1_1_path_finder_html"><div class="ttname"><a href="class_path_a_p_i_1_1_path_finder.html">PathAPI::PathFinder</a></div><div class="ttdoc">The heart of the PathAPI, that should find the path for the user.</div><div class="ttdef"><b>Definition:</b> pathfinder.h:10</div></div>
