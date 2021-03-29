@@ -84,9 +84,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac554a8febd5a5d7fd59a3c1c0e9adc3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path_finder.html#ac554a8febd5a5d7fd59a3c1c0e9adc3c">PathFinder</a> ()</td></tr>
 <tr class="memdesc:ac554a8febd5a5d7fd59a3c1c0e9adc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="class_path_a_p_i_1_1_path_finder.html#ac554a8febd5a5d7fd59a3c1c0e9adc3c">More...</a><br /></td></tr>
 <tr class="separator:ac554a8febd5a5d7fd59a3c1c0e9adc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d1b811f65c13a7183cc1c93ac60ff92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path_finder.html#a6d1b811f65c13a7183cc1c93ac60ff92">TestFunction</a> ()</td></tr>
-<tr class="memdesc:a6d1b811f65c13a7183cc1c93ac60ff92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only a simple test function.  <a href="class_path_a_p_i_1_1_path_finder.html#a6d1b811f65c13a7183cc1c93ac60ff92">More...</a><br /></td></tr>
-<tr class="separator:a6d1b811f65c13a7183cc1c93ac60ff92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5091f4dbc97866ac4ec49dd1dd17494b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b">AddNode</a> (const std::vector&lt; uint32_t &gt; &amp;connections)</td></tr>
+<tr class="memdesc:a5091f4dbc97866ac4ec49dd1dd17494b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adding a node to the pathfinders current map.  <a href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b">More...</a><br /></td></tr>
+<tr class="separator:a5091f4dbc97866ac4ec49dd1dd17494b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6caec6f5e6c56f42f46b88c7131e6041"><td class="memItemLeft" align="right" valign="top"><a id="a6caec6f5e6c56f42f46b88c7131e6041"></a>
+<a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path_finder.html#a6caec6f5e6c56f42f46b88c7131e6041">GetNode</a> (uint32_t id)</td></tr>
+<tr class="memdesc:a6caec6f5e6c56f42f46b88c7131e6041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a node from the map corresponding to the id. <br /></td></tr>
+<tr class="separator:a6caec6f5e6c56f42f46b88c7131e6041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6721eed778f56de395424543184cd34"><td class="memItemLeft" align="right" valign="top"><a id="af6721eed778f56de395424543184cd34"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path_finder.html#af6721eed778f56de395424543184cd34">GetMapSize</a> ()</td></tr>
+<tr class="memdesc:af6721eed778f56de395424543184cd34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the size of the Map. <br /></td></tr>
+<tr class="separator:af6721eed778f56de395424543184cd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The heart of the <a class="el" href="namespace_path_a_p_i.html" title="The namespace for the whole 2DPathAPI project.">PathAPI</a>, that should find the path for the user. </p>
@@ -113,24 +121,24 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6d1b811f65c13a7183cc1c93ac60ff92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d1b811f65c13a7183cc1c93ac60ff92">&#9670;&nbsp;</a></span>TestFunction()</h2>
+<a id="a5091f4dbc97866ac4ec49dd1dd17494b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5091f4dbc97866ac4ec49dd1dd17494b">&#9670;&nbsp;</a></span>AddNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int PathAPI::PathFinder::TestFunction </td>
+          <td class="memname"><a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> * PathAPI::PathFinder::AddNode </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>connections</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Only a simple test function. </p>
-<p>This was only created so I could check that the intial project setup worked correctly.</p>
-<dl class="section return"><dt>Returns</dt><dd>always returns 0 </dd></dl>
+<p>Adding a node to the pathfinders current map. </p>
+<p>This is the only way a node can be created. Because creating a node in a vacuum does not make any sense. It also ensures that the node gets the correct id value. </p>
 
 </div>
 </div>

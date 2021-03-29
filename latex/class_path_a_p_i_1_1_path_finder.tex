@@ -14,8 +14,14 @@ The heart of the \mbox{\hyperlink{namespace_path_a_p_i}{Path\+API}}, that should
 \item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_ac554a8febd5a5d7fd59a3c1c0e9adc3c}{Path\+Finder}} ()
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a6d1b811f65c13a7183cc1c93ac60ff92}{Test\+Function}} ()
-\begin{DoxyCompactList}\small\item\em Only a simple test function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}{Add\+Node}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&connections)
+\begin{DoxyCompactList}\small\item\em Adding a node to the pathfinders current map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}\label{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}} 
+\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}{Get\+Node}} (uint32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Gets a node from the map corresponding to the id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}\label{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}} 
+uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}{Get\+Map\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the size of the Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -37,22 +43,17 @@ Default Constructor.
 Will probably be replaced soon 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a6d1b811f65c13a7183cc1c93ac60ff92}\label{class_path_a_p_i_1_1_path_finder_a6d1b811f65c13a7183cc1c93ac60ff92}} 
-\index{PathAPI::PathFinder@{PathAPI::PathFinder}!TestFunction@{TestFunction}}
-\index{TestFunction@{TestFunction}!PathAPI::PathFinder@{PathAPI::PathFinder}}
-\doxysubsubsection{\texorpdfstring{TestFunction()}{TestFunction()}}
-{\footnotesize\ttfamily int Path\+API\+::\+Path\+Finder\+::\+Test\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}\label{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!AddNode@{AddNode}}
+\index{AddNode@{AddNode}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{AddNode()}{AddNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ Path\+API\+::\+Path\+Finder\+::\+Add\+Node (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{connections }\end{DoxyParamCaption})}
 
 
 
-Only a simple test function. 
+Adding a node to the pathfinders current map. 
 
-This was only created so I could check that the intial project setup worked correctly.
-
-\begin{DoxyReturn}{Returns}
-always returns 0 
-\end{DoxyReturn}
-
+This is the only way a node can be created. Because creating a node in a vacuum does not make any sense. It also ensures that the node gets the correct id value. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

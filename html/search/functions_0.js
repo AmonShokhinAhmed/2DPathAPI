@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pathfinder_5',['PathFinder',['../class_path_a_p_i_1_1_path_finder.html#ac554a8febd5a5d7fd59a3c1c0e9adc3c',1,'PathAPI::PathFinder']]]
+  ['addnode_11',['AddNode',['../class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b',1,'PathAPI::PathFinder']]]
 ];
