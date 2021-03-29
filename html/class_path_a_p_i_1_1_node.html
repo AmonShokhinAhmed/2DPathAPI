@@ -68,7 +68,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_path_a_p_i_1_1_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PathAPI::Node Class Reference</div>  </div>
@@ -86,12 +87,63 @@ const std::vector&lt; uint32_t &gt; &amp;&#160;</td><td class="memItemRight" val
 <tr class="memdesc:a7cca7bf43022872d8601f704f99b8857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the node's connections. <br /></td></tr>
 <tr class="separator:a7cca7bf43022872d8601f704f99b8857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a8679690cc57df05e11bee155331052c0"><td class="memItemLeft" align="right" valign="top"><a id="a8679690cc57df05e11bee155331052c0"></a>
-<a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>PathFinder::AddNode</b> (const std::vector&lt; uint32_t &gt; &amp;connections)</td></tr>
-<tr class="separator:a8679690cc57df05e11bee155331052c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a37c6266367933e320457a12d57af2d3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_node.html#a37c6266367933e320457a12d57af2d3f">Node</a> (const std::vector&lt; uint32_t &gt; &amp;<a class="el" href="class_path_a_p_i_1_1_node.html#ad4b2ef360118794b6e5a3f5e058c7e2d">connections</a>, uint32_t <a class="el" href="class_path_a_p_i_1_1_node.html#ad98e00b3f2a5eca5512646b888c0880d">id</a>)</td></tr>
+<tr class="memdesc:a37c6266367933e320457a12d57af2d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> is going to have and assigning it its id.  <a href="class_path_a_p_i_1_1_node.html#a37c6266367933e320457a12d57af2d3f">More...</a><br /></td></tr>
+<tr class="separator:a37c6266367933e320457a12d57af2d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad4b2ef360118794b6e5a3f5e058c7e2d"><td class="memItemLeft" align="right" valign="top"><a id="ad4b2ef360118794b6e5a3f5e058c7e2d"></a>
+std::vector&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_node.html#ad4b2ef360118794b6e5a3f5e058c7e2d">connections</a></td></tr>
+<tr class="memdesc:ad4b2ef360118794b6e5a3f5e058c7e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds id's of all connections in the containing vector. <br /></td></tr>
+<tr class="separator:ad4b2ef360118794b6e5a3f5e058c7e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98e00b3f2a5eca5512646b888c0880d"><td class="memItemLeft" align="right" valign="top"><a id="ad98e00b3f2a5eca5512646b888c0880d"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_node.html#ad98e00b3f2a5eca5512646b888c0880d">id</a></td></tr>
+<tr class="memdesc:ad98e00b3f2a5eca5512646b888c0880d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the node is also it's index in the containing vecotr. <br /></td></tr>
+<tr class="separator:ad98e00b3f2a5eca5512646b888c0880d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a37c6266367933e320457a12d57af2d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c6266367933e320457a12d57af2d3f">&#9670;&nbsp;</a></span>Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PathAPI::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>connections</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> is going to have and assigning it its id. </p>
+<p>This constructor should only ever be called from <a class="el" href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b" title="Adding a node to the pathfinders current map.">PathFinder::AddNode</a>, because creating a node in a vacuum does not make sense </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>2DPathAPI/src/<a class="el" href="node_8h_source.html">node.h</a></li>
 <li>2DPathAPI/src/node.cpp</li>
