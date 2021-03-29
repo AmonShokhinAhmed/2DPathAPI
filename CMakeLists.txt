@@ -4,5 +4,7 @@ project(2DPathAPI)
 
 add_subdirectory(Demo)
 add_subdirectory(2DPathAPI)
-add_subdirectory(Tests)
 
+include(CTest)
+enable_testing()
+add_subdirectory(Tests)

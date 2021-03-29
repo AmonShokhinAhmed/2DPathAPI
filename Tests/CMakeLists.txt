@@ -23,3 +23,6 @@ target_link_libraries(Tests PRIVATE Catch2::Catch2)
 target_link_libraries (Tests LINK_PUBLIC 2DPathAPI)
 
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/contrib)
+
+include(Catch)
+catch_discover_tests(Tests)
