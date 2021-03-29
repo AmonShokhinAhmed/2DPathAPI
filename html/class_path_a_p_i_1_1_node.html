@@ -75,6 +75,11 @@ $(function() {
 <div class="title">PathAPI::Node Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> class for use by the <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI, that should find the path for the user.">PathFinder</a> class.  
+ <a href="class_path_a_p_i_1_1_node.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="node_8h_source.html">node.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -90,7 +95,7 @@ const std::vector&lt; uint32_t &gt; &amp;&#160;</td><td class="memItemRight" val
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a37c6266367933e320457a12d57af2d3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_node.html#a37c6266367933e320457a12d57af2d3f">Node</a> (const std::vector&lt; uint32_t &gt; &amp;<a class="el" href="class_path_a_p_i_1_1_node.html#ad4b2ef360118794b6e5a3f5e058c7e2d">connections</a>, uint32_t <a class="el" href="class_path_a_p_i_1_1_node.html#ad98e00b3f2a5eca5512646b888c0880d">id</a>)</td></tr>
-<tr class="memdesc:a37c6266367933e320457a12d57af2d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> is going to have and assigning it its id.  <a href="class_path_a_p_i_1_1_node.html#a37c6266367933e320457a12d57af2d3f">More...</a><br /></td></tr>
+<tr class="memdesc:a37c6266367933e320457a12d57af2d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> is going to have and assigning it its id.  <a href="class_path_a_p_i_1_1_node.html#a37c6266367933e320457a12d57af2d3f">More...</a><br /></td></tr>
 <tr class="separator:a37c6266367933e320457a12d57af2d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -104,7 +109,10 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memdesc:ad98e00b3f2a5eca5512646b888c0880d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the node is also it's index in the containing vecotr. <br /></td></tr>
 <tr class="separator:ad98e00b3f2a5eca5512646b888c0880d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> class for use by the <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI, that should find the path for the user.">PathFinder</a> class. </p>
+<p>Stores ids of other nodes it is connected to. Those ids are getting set during creation by the <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI, that should find the path for the user.">PathFinder</a> and correspond to the node's position in the map member variable of <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI, that should find the path for the user.">PathFinder</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a37c6266367933e320457a12d57af2d3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37c6266367933e320457a12d57af2d3f">&#9670;&nbsp;</a></span>Node()</h2>
 
@@ -139,7 +147,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </table>
 </div><div class="memdoc">
 
-<p>Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> is going to have and assigning it its id. </p>
+<p>Constructor using the connection the <a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> is going to have and assigning it its id. </p>
 <p>This constructor should only ever be called from <a class="el" href="class_path_a_p_i_1_1_path_finder.html#a5091f4dbc97866ac4ec49dd1dd17494b" title="Adding a node to the pathfinders current map.">PathFinder::AddNode</a>, because creating a node in a vacuum does not make sense </p>
 
 </div>
