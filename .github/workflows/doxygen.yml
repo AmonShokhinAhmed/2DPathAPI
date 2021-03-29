@@ -10,7 +10,7 @@ jobs:
       - name: Redirect HTML ↪
         uses: 1arp/create-a-file-action@0.2
         with:
-          path: '${{github.workspace}}/docs'
+          path: 'docs'
           file: 'index.html'
           content: |
             Hello
