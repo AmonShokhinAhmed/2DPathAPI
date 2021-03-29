@@ -19,7 +19,7 @@ namespace PathAPI {
         std::vector<uint32_t> connections;
         /// The id of the node is also it's index in the containing vecotr
         uint32_t id;
-        /// Constructor using the connection the Node is going to have and assigning it its id
+        /// Constructor using the connection the Node is going to have and assigning it it's id
         /**
          * This constructor should only ever be called from PathFinder::AddNode, because creating a
          * node in a vacuum does not make sense
