@@ -11,7 +11,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1
 
       - name: Redirect HTML ↪
-      - uses: "finnp/create-file-action@master"
+        uses: "finnp/create-file-action@master"
       env:
         FILE_NAME: "docs/index.html"
         FILE_DATA: "test"
