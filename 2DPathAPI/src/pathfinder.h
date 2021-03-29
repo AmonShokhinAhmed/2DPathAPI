@@ -13,7 +13,7 @@ class PathFinder {
      * Will probably be replaced soon
      */
     PathFinder();
-    /// A simple test function
+    /// Only simple test function
     /**
      * This was only created so I could check that the intial project setup worked correctly.
      *
