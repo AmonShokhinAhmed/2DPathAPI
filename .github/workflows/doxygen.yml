@@ -7,17 +7,17 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
-      - name: Doxygen 🎈 
-        uses: mattnotmitt/doxygen-action@v1
-        
       - name: Redirect HTML ↪
         uses: 1arp/create-a-file-action@0.2
         with:
-          path: 'docs'
+          path: '${{github.workspace}}/docs'
           file: 'index.html'
           content: |
             Hello
             World
+
+      - name: Doxygen 🎈 
+        uses: mattnotmitt/doxygen-action@v1
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
