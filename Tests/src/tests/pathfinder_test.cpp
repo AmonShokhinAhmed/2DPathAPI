@@ -2,6 +2,7 @@
 #include "pathfinder.h"
 #include <catch2/catch.hpp>
 
+/*
 SCENARIO("Creating a Pathfinder instance and adding nodes", "[nodes]") {
     GIVEN("A Pathfinder instance is created") {
         PathAPI::PathFinder pathfinder;
@@ -100,3 +101,4 @@ SCENARIO("Creating a Pathfinder instance and adding nodes", "[nodes]") {
         }
     }
 }
+*/

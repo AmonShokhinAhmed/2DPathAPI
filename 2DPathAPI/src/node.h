@@ -1,5 +1,5 @@
 #pragma once
-#include "pathfinder.h"
+#include "navmesh.h"
 #include <vector>
 namespace PathAPI {
     /// Node class for use by the PathFinder class
@@ -19,14 +19,16 @@ namespace PathAPI {
         std::vector<uint32_t> connections;
         /// The id of the node is also it's index in the containing vecotr
         uint32_t id;
+        /// Position of the node in the scene
+        Vector2 position;
         /// Constructor using the connection the Node is going to have and assigning it it's id
         /**
          * This constructor should only ever be called from PathFinder::AddNode, because creating a
          * node in a vacuum does not make sense
          */
-        Node(const std::vector<uint32_t> &connections, uint32_t id);
+        Node(const Vector2 &position, const std::vector<uint32_t> &connections, uint32_t id);
 
         // Declaring PathFinder::AddNode as a friend so it has access to the private constructor
-        friend Node *PathFinder::AddNode(const std::vector<uint32_t> &connections);
+        friend Node *Navmesh::AddNode(const std::vector<uint32_t> &connections);
     };
 } // namespace PathAPI

@@ -1,5 +1,5 @@
 namespace PathAPI {
-    class vector2 {
+    class Vector2 {
       public:
         vector2(float x, float y);
     };
