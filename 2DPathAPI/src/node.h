@@ -28,7 +28,7 @@ namespace PathAPI {
          */
         Node(const Vector2 &position, const std::vector<uint32_t> &connections, uint32_t id);
 
-        // Declaring PathFinder::AddNode as a friend so it has access to the private constructor
-        friend Node *Navmesh::AddNode(const std::vector<uint32_t> &connections);
+        // Declaring Navmesh::AddNode as a friend so it has access to the private constructor
+        friend Node *Navmesh::AddNode(Vector2 position, const std::vector<uint32_t> &connections);
     };
 } // namespace PathAPI

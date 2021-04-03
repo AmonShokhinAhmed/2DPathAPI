@@ -1,3 +1,4 @@
+#pragma once
 #include "vector2.h"
 namespace PathAPI {
     class Transform {

@@ -1,5 +1,6 @@
 #pragma once
 #include "navmesh.h"
+#include "path.h"
 #include <vector>
 /// The namespace for the whole 2DPathAPI project.
 namespace PathAPI {
@@ -11,7 +12,9 @@ namespace PathAPI {
     class PathFinder {
       public:
         /// Default Constructor
-        PathFinder();
+        PathFinder(Navmesh navmesh);
+        Path FindPath();
+        Path OptimizePath(Path path);
 
       private:
         Navmesh navmesh;

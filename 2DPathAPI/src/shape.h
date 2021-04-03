@@ -1,3 +1,4 @@
+#pragma once
 #include "transform.h"
 #include "vector2.h"
 #include <string>
@@ -8,6 +9,6 @@ namespace PathAPI {
         bool Walkable = false;
         Transform Transform;
         Shape(std::string path);
-        Shape(std::vector<vector2> vertices);
+        Shape(std::vector<Vector2> vertices);
     };
 } // namespace PathAPI
