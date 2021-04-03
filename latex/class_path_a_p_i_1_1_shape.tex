@@ -1,0 +1,90 @@
+\hypertarget{class_path_a_p_i_1_1_shape}{}\doxysection{Path\+API\+::Shape Class Reference}
+\label{class_path_a_p_i_1_1_shape}\index{PathAPI::Shape@{PathAPI::Shape}}
+
+
+\mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} class, storing a list of vectors to define a 2D shape.  
+
+
+
+
+{\ttfamily \#include $<$shape.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_shape_a6db589c81a1411773b1c9cd30073d580}{Shape}} (const std\+::string \&path, bool white\+As\+Alpha=true)
+\begin{DoxyCompactList}\small\item\em Constructor using a path to load a image file from disc to define the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_shape_ade5ed246ae246f54c5ddddcf93b969c7}{Shape}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&vertices)
+\begin{DoxyCompactList}\small\item\em Constructor that allows the user to manually define the shapes vertices. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \& \mbox{\hyperlink{class_path_a_p_i_1_1_shape_a61537947a50ab2b411e9aaf51cdea458}{Get\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em Getter to the stored vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_shape_a99cc3728afda05ceb860a2ddd26a9ba8}\label{class_path_a_p_i_1_1_shape_a99cc3728afda05ceb860a2ddd26a9ba8}} 
+bool \mbox{\hyperlink{class_path_a_p_i_1_1_shape_a99cc3728afda05ceb860a2ddd26a9ba8}{Walkable}} = false
+\begin{DoxyCompactList}\small\item\em Flag to define the shape as walkable for potential \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} creation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_shape_a13b641bee920cc56a3e0e633d367fdc2}\label{class_path_a_p_i_1_1_shape_a13b641bee920cc56a3e0e633d367fdc2}} 
+\mbox{\hyperlink{class_path_a_p_i_1_1_transform}{Transform}} \mbox{\hyperlink{class_path_a_p_i_1_1_shape_a13b641bee920cc56a3e0e633d367fdc2}{Transform}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_path_a_p_i_1_1_transform}{Transform}} of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} class, storing a list of vectors to define a 2D shape. 
+
+This is the most basic way to represent an object. It consists of the a list of \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} objects (forming triangles), that defines a basic shape. That shape can be altered by manipulating the \mbox{\hyperlink{class_path_a_p_i_1_1_transform}{Transform}} member variable. In addition the Walkable flag can be used to define if the shape should be part of the walkable terrain, when using it to create a \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_shape_a6db589c81a1411773b1c9cd30073d580}\label{class_path_a_p_i_1_1_shape_a6db589c81a1411773b1c9cd30073d580}} 
+\index{PathAPI::Shape@{PathAPI::Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!PathAPI::Shape@{PathAPI::Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Path\+API\+::\+Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{bool}]{white\+As\+Alpha = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructor using a path to load a image file from disc to define the shape. 
+
+This will define the shape considering pixel as empty when they are either white or the alpha channel value is zero. White pixels can also be considered filled if the white\+As\+Alpha flag is turned to false 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & -\/ \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} to the image file \\
+\hline
+\mbox{\texttt{ in}}  & {\em white\+As\+Alpha} & -\/ true if white pixel should be considered empty \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_shape_ade5ed246ae246f54c5ddddcf93b969c7}\label{class_path_a_p_i_1_1_shape_ade5ed246ae246f54c5ddddcf93b969c7}} 
+\index{PathAPI::Shape@{PathAPI::Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!PathAPI::Shape@{PathAPI::Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Path\+API\+::\+Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&}]{vertices }\end{DoxyParamCaption})}
+
+
+
+Constructor that allows the user to manually define the shapes vertices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vertices} & -\/ the vertices the shape consists of. Every three indices denote on triangle, so only a vector with a size of a multiple of three will be valid. If it is invalid the \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} will just ignore the last 1 or 2 indices. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_shape_a61537947a50ab2b411e9aaf51cdea458}\label{class_path_a_p_i_1_1_shape_a61537947a50ab2b411e9aaf51cdea458}} 
+\index{PathAPI::Shape@{PathAPI::Shape}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!PathAPI::Shape@{PathAPI::Shape}}
+\doxysubsubsection{\texorpdfstring{GetVertices()}{GetVertices()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}}$>$\& Path\+API\+::\+Shape\+::\+Get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter to the stored vertices. 
+
+\begin{DoxyReturn}{Returns}
+a reference vector containing it\textquotesingle{}s vertices 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+2\+DPath\+API/src/shape.\+h\end{DoxyCompactItemize}

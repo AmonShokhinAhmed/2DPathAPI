@@ -12,50 +12,144 @@ The heart of the \mbox{\hyperlink{namespace_path_a_p_i}{Path\+API}}, that should
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_ac554a8febd5a5d7fd59a3c1c0e9adc3c}{Path\+Finder}} ()
-\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}{Add\+Node}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&connections)
-\begin{DoxyCompactList}\small\item\em Adding a node to the pathfinders current map. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}\label{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}} 
-\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a6caec6f5e6c56f42f46b88c7131e6041}{Get\+Node}} (uint32\+\_\+t id)
-\begin{DoxyCompactList}\small\item\em Gets a node from the map corresponding to the id. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}\label{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}} 
-uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_af6721eed778f56de395424543184cd34}{Get\+Map\+Size}} ()
-\begin{DoxyCompactList}\small\item\em Getter for the size of the Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a581b25912af255611ce8b4204c12fd49}{Path\+Finder}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&navmesh)
+\begin{DoxyCompactList}\small\item\em Constructor using a navmesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_abcb1e94b42c3f510b6bad3c965fe0936}{Find\+Fast\+Path}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&start, const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&end, bool \&path\+Found)
+\begin{DoxyCompactList}\small\item\em Finds a path as fast as possible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a214b8a86ac6fe641a731c0d965294070}{Find\+Optimized\+Path}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&start, const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&end, bool \&path\+Found)
+\begin{DoxyCompactList}\small\item\em Finds the best possible path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_ac215a4a03792628778035f9572db95aa}{Find\+Fast\+Path}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&positions, bool \&path\+Found)
+\begin{DoxyCompactList}\small\item\em Finds a path as fast as possible using all passed positions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a4a70a0e1b83afedbb464f365d4ef1ac4}{Find\+Optimized\+Path}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&, bool \&path\+Found)
+\begin{DoxyCompactList}\small\item\em Finds the best possible path using all passed positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a5fb968ef6ff951cf8caf991c2babd330}{create\+Path}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&positions)
+\begin{DoxyCompactList}\small\item\em function is used by all Find$\ast$\+Path methods to create the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a55bd11dbc86f6af39923970735f541a5}\label{class_path_a_p_i_1_1_path_finder_a55bd11dbc86f6af39923970735f541a5}} 
+const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a55bd11dbc86f6af39923970735f541a5}{Navmesh}}
+\begin{DoxyCompactList}\small\item\em The navmesh the pathfinder uses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The heart of the \mbox{\hyperlink{namespace_path_a_p_i}{Path\+API}}, that should find the path for the user. 
 
-This class handles pretty much everything the user wants from the \mbox{\hyperlink{namespace_path_a_p_i}{Path\+API}}. 
+This class handles the pathfinding. To do that it uses a user created navmesh. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_ac554a8febd5a5d7fd59a3c1c0e9adc3c}\label{class_path_a_p_i_1_1_path_finder_ac554a8febd5a5d7fd59a3c1c0e9adc3c}} 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a581b25912af255611ce8b4204c12fd49}\label{class_path_a_p_i_1_1_path_finder_a581b25912af255611ce8b4204c12fd49}} 
 \index{PathAPI::PathFinder@{PathAPI::PathFinder}!PathFinder@{PathFinder}}
 \index{PathFinder@{PathFinder}!PathAPI::PathFinder@{PathAPI::PathFinder}}
 \doxysubsubsection{\texorpdfstring{PathFinder()}{PathFinder()}}
-{\footnotesize\ttfamily Path\+API\+::\+Path\+Finder\+::\+Path\+Finder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Path\+API\+::\+Path\+Finder\+::\+Path\+Finder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&}]{navmesh }\end{DoxyParamCaption})}
 
 
 
-Default Constructor. 
+Constructor using a navmesh. 
 
-Will probably be replaced soon 
+The only way the pathfinder makes sense in combination with a navmesh so no other constructor is available. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}\label{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}} 
-\index{PathAPI::PathFinder@{PathAPI::PathFinder}!AddNode@{AddNode}}
-\index{AddNode@{AddNode}!PathAPI::PathFinder@{PathAPI::PathFinder}}
-\doxysubsubsection{\texorpdfstring{AddNode()}{AddNode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ Path\+API\+::\+Path\+Finder\+::\+Add\+Node (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{connections }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a5fb968ef6ff951cf8caf991c2babd330}\label{class_path_a_p_i_1_1_path_finder_a5fb968ef6ff951cf8caf991c2babd330}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!createPath@{createPath}}
+\index{createPath@{createPath}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{createPath()}{createPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} Path\+API\+::\+Path\+Finder\+::create\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&}]{positions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Adding a node to the pathfinders current map. 
+function is used by all Find$\ast$\+Path methods to create the path. 
 
-This is the only way a node can be created. Because creating a node in a vacuum does not make any sense. It also ensures that the node gets the correct id value. 
+This is a friend function of path, so we can access the private constructor \mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_ac215a4a03792628778035f9572db95aa}\label{class_path_a_p_i_1_1_path_finder_ac215a4a03792628778035f9572db95aa}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!FindFastPath@{FindFastPath}}
+\index{FindFastPath@{FindFastPath}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{FindFastPath()}{FindFastPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} Path\+API\+::\+Path\+Finder\+::\+Find\+Fast\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&}]{positions,  }\item[{bool \&}]{path\+Found }\end{DoxyParamCaption})}
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+
+
+Finds a path as fast as possible using all passed positions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ Positions the path has to travel through, starting at index 0 and ending at the last index in the vector. \\
+\hline
+\mbox{\texttt{ out}}  & {\em path\+Found} & -\/ returns false if no possible path was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} object, that allows the user use the found path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_abcb1e94b42c3f510b6bad3c965fe0936}\label{class_path_a_p_i_1_1_path_finder_abcb1e94b42c3f510b6bad3c965fe0936}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!FindFastPath@{FindFastPath}}
+\index{FindFastPath@{FindFastPath}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{FindFastPath()}{FindFastPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} Path\+API\+::\+Path\+Finder\+::\+Find\+Fast\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&}]{end,  }\item[{bool \&}]{path\+Found }\end{DoxyParamCaption})}
+
+
+
+Finds a path as fast as possible. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & -\/ Start position of the path \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & -\/ End position of the path \\
+\hline
+\mbox{\texttt{ out}}  & {\em path\+Found} & -\/ returns false if no possible path was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} object, that allows the user use the found path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a4a70a0e1b83afedbb464f365d4ef1ac4}\label{class_path_a_p_i_1_1_path_finder_a4a70a0e1b83afedbb464f365d4ef1ac4}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!FindOptimizedPath@{FindOptimizedPath}}
+\index{FindOptimizedPath@{FindOptimizedPath}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{FindOptimizedPath()}{FindOptimizedPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} Path\+API\+::\+Path\+Finder\+::\+Find\+Optimized\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&}]{,  }\item[{bool \&}]{path\+Found }\end{DoxyParamCaption})}
+
+
+
+Finds the best possible path using all passed positions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ Positions the path has to travel through, starting at index 0 and ending at the last index in the vector. \\
+\hline
+\mbox{\texttt{ out}}  & {\em path\+Found} & -\/ returns false if no possible path was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} object, that allows the user use the found path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_finder_a214b8a86ac6fe641a731c0d965294070}\label{class_path_a_p_i_1_1_path_finder_a214b8a86ac6fe641a731c0d965294070}} 
+\index{PathAPI::PathFinder@{PathAPI::PathFinder}!FindOptimizedPath@{FindOptimizedPath}}
+\index{FindOptimizedPath@{FindOptimizedPath}!PathAPI::PathFinder@{PathAPI::PathFinder}}
+\doxysubsubsection{\texorpdfstring{FindOptimizedPath()}{FindOptimizedPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} Path\+API\+::\+Path\+Finder\+::\+Find\+Optimized\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&}]{end,  }\item[{bool \&}]{path\+Found }\end{DoxyParamCaption})}
+
+
+
+Finds the best possible path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & -\/ Start position of the path \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & -\/ End position of the path \\
+\hline
+\mbox{\texttt{ out}}  & {\em path\+Found} & -\/ returns false if no possible path was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}} object, that allows the user use the found path. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-2\+DPath\+API/src/pathfinder.\+h\item 
-2\+DPath\+API/src/pathfinder.\+cpp\end{DoxyCompactItemize}
+2\+DPath\+API/src/pathfinder.\+h\end{DoxyCompactItemize}

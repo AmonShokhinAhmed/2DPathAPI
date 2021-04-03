@@ -1,0 +1,133 @@
+\hypertarget{class_path_a_p_i_1_1_navmesh}{}\doxysection{Path\+API\+::Navmesh Class Reference}
+\label{class_path_a_p_i_1_1_navmesh}\index{PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}{Navmesh}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}{Navmesh}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}{Navmesh}} (std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $>$ shapes)
+\begin{DoxyCompactList}\small\item\em Constructor using a vector of shapes to create the navmesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a30af6fa9b7bc26820bf855280ab093fe}{Add\+Node}} (\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} position, const std\+::vector$<$ uint32\+\_\+t $>$ \&connections)
+\begin{DoxyCompactList}\small\item\em Adding a node to the navmesh\textquotesingle{}s current map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a3294d5d5d223bbfc1f7a390c9b86232d}{Get\+Node}} (uint32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Gets a node from the map corresponding to the id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_ada9712ce1ff788cc5990916c880c9fd7}{Get\+Node}} (\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} position)
+\begin{DoxyCompactList}\small\item\em Gets a node from the map corresponding to the position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a515b14a719adad038827f812fe8524b8}\label{class_path_a_p_i_1_1_navmesh_a515b14a719adad038827f812fe8524b8}} 
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a515b14a719adad038827f812fe8524b8}{$\sim$\+Navmesh}} ()
+\begin{DoxyCompactList}\small\item\em Destructor cleaing up all the nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a41c259bdffa2869ea1adb2ede5970127}\label{class_path_a_p_i_1_1_navmesh_a41c259bdffa2869ea1adb2ede5970127}} 
+std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ $>$ \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a41c259bdffa2869ea1adb2ede5970127}{map}}
+\begin{DoxyCompactList}\small\item\em Vector containing all nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}\label{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
+\index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+As this does not yet create a \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} network representing the scene, no path can be found. This means this Constructor only makes sense when manually adding Nodes with the Add\+Node function. This is intended as it provides the User with more flexibility. \mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}\label{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
+\index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ the navmesh we want to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}\label{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
+\index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $>$}]{shapes }\end{DoxyParamCaption})}
+
+
+
+Constructor using a vector of shapes to create the navmesh. 
+
+Using shapes flagged as walkable or not it is possible to create the \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} pretty intuitively from an already existing scene. This changes that representation to a \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} network so path finding algorithms can work more efficiently 
+\begin{DoxyParams}{Parameters}
+{\em shapes} & -\/ the vector of shapes that is used to create the navmesh \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a30af6fa9b7bc26820bf855280ab093fe}\label{class_path_a_p_i_1_1_navmesh_a30af6fa9b7bc26820bf855280ab093fe}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!AddNode@{AddNode}}
+\index{AddNode@{AddNode}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{AddNode()}{AddNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}}$\ast$ Path\+API\+::\+Navmesh\+::\+Add\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}}}]{position,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{connections }\end{DoxyParamCaption})}
+
+
+
+Adding a node to the navmesh\textquotesingle{}s current map. 
+
+This is the only way a node can be \char`\"{}manually\char`\"{} created by the user. Because creating a node in a vacuum does not make any sense. It also ensures that the node gets the correct id value. This is also used when copying another navmesh or creating a navmesh from a shape. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ the position of the added node \\
+\hline
+\mbox{\texttt{ in}}  & {\em connections} & -\/ the ids of the nodes the added node has connections to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the added \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} or a nullptr when no node could be added (this happens when connections contains invalid id\textquotesingle{}s) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a3294d5d5d223bbfc1f7a390c9b86232d}\label{class_path_a_p_i_1_1_navmesh_a3294d5d5d223bbfc1f7a390c9b86232d}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{GetNode()}{GetNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}}$\ast$ Path\+API\+::\+Navmesh\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Gets a node from the map corresponding to the id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & -\/ the id the looked for node should have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found node or a nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_ada9712ce1ff788cc5990916c880c9fd7}\label{class_path_a_p_i_1_1_navmesh_ada9712ce1ff788cc5990916c880c9fd7}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{GetNode()}{GetNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}}$\ast$ Path\+API\+::\+Navmesh\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Gets a node from the map corresponding to the position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ the position the looked for node should have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found node or a nullptr 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+2\+DPath\+API/src/navmesh.\+h\end{DoxyCompactItemize}

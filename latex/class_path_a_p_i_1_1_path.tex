@@ -1,0 +1,107 @@
+\hypertarget{class_path_a_p_i_1_1_path}{}\doxysection{Path\+API\+::Path Class Reference}
+\label{class_path_a_p_i_1_1_path}\index{PathAPI::Path@{PathAPI::Path}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}{Get\+Next\+Position}} (float step\+Size, bool \&endof\+Path)
+\begin{DoxyCompactList}\small\item\em Gets the next position on the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_a398cd8df20e9b4f18005a05aa2e95476}{Get\+Position\+On\+Path}} (float position)
+\begin{DoxyCompactList}\small\item\em Gets the position on the path determined by the normalized position value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_path_a_p_i_1_1_path_a2c3eb4c1b917ac0821fd4cc4f271e745}{Set\+Current\+Position}} (float position)
+\begin{DoxyCompactList}\small\item\em Sets the current position on the path to the normalized position value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_path_a5c7fd0934b74480a41be816cfc94bb5b}{Path}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&\mbox{\hyperlink{class_path_a_p_i_1_1_path_ae9cc5c22e65cf95fc371594a01161ac1}{positions}})
+\begin{DoxyCompactList}\small\item\em Constructor building the path from an ordered list of positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_aba405fba8822a71a7fd6ccffd2c57164}\label{class_path_a_p_i_1_1_path_aba405fba8822a71a7fd6ccffd2c57164}} 
+int \mbox{\hyperlink{class_path_a_p_i_1_1_path_aba405fba8822a71a7fd6ccffd2c57164}{current\+Position}}
+\begin{DoxyCompactList}\small\item\em index of the current position in the positions vector \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_afdabacc40689f8f405d874cb959c898d}\label{class_path_a_p_i_1_1_path_afdabacc40689f8f405d874cb959c898d}} 
+float \mbox{\hyperlink{class_path_a_p_i_1_1_path_afdabacc40689f8f405d874cb959c898d}{distance\+Traveled}}
+\begin{DoxyCompactList}\small\item\em distance we have currently travelled between current\+Position and the following index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_ae9cc5c22e65cf95fc371594a01161ac1}\label{class_path_a_p_i_1_1_path_ae9cc5c22e65cf95fc371594a01161ac1}} 
+std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \mbox{\hyperlink{class_path_a_p_i_1_1_path_ae9cc5c22e65cf95fc371594a01161ac1}{positions}}
+\begin{DoxyCompactList}\small\item\em stores the positions the path consists of \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a5c7fd0934b74480a41be816cfc94bb5b}\label{class_path_a_p_i_1_1_path_a5c7fd0934b74480a41be816cfc94bb5b}} 
+\index{PathAPI::Path@{PathAPI::Path}!Path@{Path}}
+\index{Path@{Path}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily Path\+API\+::\+Path\+::\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} $>$ \&}]{positions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor building the path from an ordered list of positions. 
+
+The passed vector has to have it\textquotesingle{}s position in the orderer we want the path to be travelled in. As the positions can\textquotesingle{}t contain every possible step the user would want to know about, they should only feature points where the path changes direction, as every other point can be interpolated. This is private because only Pathfinder needs to be able to create a \mbox{\hyperlink{class_path_a_p_i_1_1_path}{Path}}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em positions} & -\/ the positions the path consists of \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}\label{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}} 
+\index{PathAPI::Path@{PathAPI::Path}!GetNextPosition@{GetNextPosition}}
+\index{GetNextPosition@{GetNextPosition}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{GetNextPosition()}{GetNextPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} Path\+API\+::\+Path\+::\+Get\+Next\+Position (\begin{DoxyParamCaption}\item[{float}]{step\+Size,  }\item[{bool \&}]{endof\+Path }\end{DoxyParamCaption})}
+
+
+
+Gets the next position on the path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em step\+Size} & -\/ how far we want to travel (can also be negative) from the previous position \\
+\hline
+\mbox{\texttt{ out}}  & {\em endof\+Path} & -\/ true when we reached the end of the path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the position we traveled to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a398cd8df20e9b4f18005a05aa2e95476}\label{class_path_a_p_i_1_1_path_a398cd8df20e9b4f18005a05aa2e95476}} 
+\index{PathAPI::Path@{PathAPI::Path}!GetPositionOnPath@{GetPositionOnPath}}
+\index{GetPositionOnPath@{GetPositionOnPath}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{GetPositionOnPath()}{GetPositionOnPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} Path\+API\+::\+Path\+::\+Get\+Position\+On\+Path (\begin{DoxyParamCaption}\item[{float}]{position }\end{DoxyParamCaption})}
+
+
+
+Gets the position on the path determined by the normalized position value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ the normalized position value. This means that a value of 0 denotes the beginning of the path while 1 corresponds to the end. This value is clamped between 0 and 1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the queried position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a2c3eb4c1b917ac0821fd4cc4f271e745}\label{class_path_a_p_i_1_1_path_a2c3eb4c1b917ac0821fd4cc4f271e745}} 
+\index{PathAPI::Path@{PathAPI::Path}!SetCurrentPosition@{SetCurrentPosition}}
+\index{SetCurrentPosition@{SetCurrentPosition}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{SetCurrentPosition()}{SetCurrentPosition()}}
+{\footnotesize\ttfamily void Path\+API\+::\+Path\+::\+Set\+Current\+Position (\begin{DoxyParamCaption}\item[{float}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the current position on the path to the normalized position value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ the normalized position value. This means that a value of 0 denotes the beginning of the path while 1 corresponds to the end. This value is clamped between 0 and 1. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+2\+DPath\+API/src/path.\+h\end{DoxyCompactItemize}

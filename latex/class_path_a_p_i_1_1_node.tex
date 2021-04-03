@@ -12,16 +12,14 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a4776bce79b4d5d5e01e1d82181cf5ff2}\label{class_path_a_p_i_1_1_node_a4776bce79b4d5d5e01e1d82181cf5ff2}} 
 int \mbox{\hyperlink{class_path_a_p_i_1_1_node_a4776bce79b4d5d5e01e1d82181cf5ff2}{Get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Getter for the node\textquotesingle{}s id. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a7cca7bf43022872d8601f704f99b8857}\label{class_path_a_p_i_1_1_node_a7cca7bf43022872d8601f704f99b8857}} 
-const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{class_path_a_p_i_1_1_node_a7cca7bf43022872d8601f704f99b8857}{Get\+Connections}} ()
+const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad96a2fc155309f2464029a788e4c28e4}{Get\+Connections}} ()
 \begin{DoxyCompactList}\small\item\em Getter for the node\textquotesingle{}s connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_path_a_p_i_1_1_node_a37c6266367933e320457a12d57af2d3f}{Node}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&\mbox{\hyperlink{class_path_a_p_i_1_1_node_ad4b2ef360118794b6e5a3f5e058c7e2d}{connections}}, uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646b888c0880d}{id}})
+\mbox{\hyperlink{class_path_a_p_i_1_1_node_a9c1a2a74f71f7ac49f5e4a3d3551d7bd}{Node}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&\mbox{\hyperlink{class_path_a_p_i_1_1_node_a4277c428a187e66bb04ae6614910a0ac}{position}}, const std\+::vector$<$ uint32\+\_\+t $>$ \&\mbox{\hyperlink{class_path_a_p_i_1_1_node_ad4b2ef360118794b6e5a3f5e058c7e2d}{connections}}, uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646b888c0880d}{id}})
 \begin{DoxyCompactList}\small\item\em Constructor using the connection the \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} is going to have and assigning it it\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -31,7 +29,10 @@ std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad
 \begin{DoxyCompactList}\small\item\em Holds id\textquotesingle{}s of all connections in the containing vector. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646b888c0880d}\label{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646b888c0880d}} 
 uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646b888c0880d}{id}}
-\begin{DoxyCompactList}\small\item\em The id of the node is also it\textquotesingle{}s index in the containing vecotr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The id of the node is also it\textquotesingle{}s index in the containing vecotr. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a4277c428a187e66bb04ae6614910a0ac}\label{class_path_a_p_i_1_1_node_a4277c428a187e66bb04ae6614910a0ac}} 
+\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_node_a4277c428a187e66bb04ae6614910a0ac}{position}}
+\begin{DoxyCompactList}\small\item\em Position of the node in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -40,19 +41,56 @@ uint32\+\_\+t \mbox{\hyperlink{class_path_a_p_i_1_1_node_ad98e00b3f2a5eca5512646
 Stores ids of other nodes it is connected to. Those ids are getting set during creation by the \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder}{Path\+Finder}} and correspond to the node\textquotesingle{}s position in the map member variable of \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder}{Path\+Finder}} 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a37c6266367933e320457a12d57af2d3f}\label{class_path_a_p_i_1_1_node_a37c6266367933e320457a12d57af2d3f}} 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a9c1a2a74f71f7ac49f5e4a3d3551d7bd}\label{class_path_a_p_i_1_1_node_a9c1a2a74f71f7ac49f5e4a3d3551d7bd}} 
 \index{PathAPI::Node@{PathAPI::Node}!Node@{Node}}
 \index{Node@{Node}!PathAPI::Node@{PathAPI::Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily Path\+API\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{connections,  }\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Path\+API\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \&}]{position,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{connections,  }\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Constructor using the connection the \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} is going to have and assigning it it\textquotesingle{}s id. 
 
-This constructor should only ever be called from \mbox{\hyperlink{class_path_a_p_i_1_1_path_finder_a5091f4dbc97866ac4ec49dd1dd17494b}{Path\+Finder\+::\+Add\+Node}}, because creating a node in a vacuum does not make sense 
+This constructor should only ever be called from Path\+Finder\+::\+Add\+Node, because creating a node in a vacuum does not make sense 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & -\/ the position of the node in the scene \\
+\hline
+\mbox{\texttt{ in}}  & {\em connections} & -\/ the connections the node has \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & -\/ the id of the node \\
+\hline
+\end{DoxyParams}
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_node_ad96a2fc155309f2464029a788e4c28e4}\label{class_path_a_p_i_1_1_node_ad96a2fc155309f2464029a788e4c28e4}} 
+\index{PathAPI::Node@{PathAPI::Node}!GetConnections@{GetConnections}}
+\index{GetConnections@{GetConnections}!PathAPI::Node@{PathAPI::Node}}
+\doxysubsubsection{\texorpdfstring{GetConnections()}{GetConnections()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint32\+\_\+t$>$\& Path\+API\+::\+Node\+::\+Get\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the node\textquotesingle{}s connections. 
+
+\begin{DoxyReturn}{Returns}
+the connections 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_node_a4776bce79b4d5d5e01e1d82181cf5ff2}\label{class_path_a_p_i_1_1_node_a4776bce79b4d5d5e01e1d82181cf5ff2}} 
+\index{PathAPI::Node@{PathAPI::Node}!GetId@{GetId}}
+\index{GetId@{GetId}!PathAPI::Node@{PathAPI::Node}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily int Path\+API\+::\+Node\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the node\textquotesingle{}s id. 
+
+\begin{DoxyReturn}{Returns}
+the id 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-2\+DPath\+API/src/node.\+h\item 
-2\+DPath\+API/src/node.\+cpp\end{DoxyCompactItemize}
+2\+DPath\+API/src/node.\+h\end{DoxyCompactItemize}
