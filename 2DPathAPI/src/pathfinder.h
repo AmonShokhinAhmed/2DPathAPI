@@ -13,8 +13,8 @@ namespace PathAPI {
       public:
         /// Default Constructor
         PathFinder(Navmesh navmesh);
-        Path FindPath();
-        Path OptimizePath(Path path);
+        Path FindFastPath();
+        Path FindOptimizedPath();
 
       private:
         Navmesh navmesh;
