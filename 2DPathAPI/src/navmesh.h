@@ -15,12 +15,16 @@ namespace PathAPI {
          */
         Navmesh();
         /// Copy constructor
+        /**
+         * @param other - the navmesh we want to copy
+         */
         Navmesh(const Navmesh &other);
         /// Constructor using a vector of shapes to create the navmesh
         /**
          * Using shapes flagged as walkable or not it is possible to create the Navmesh pretty
          * intuitively from an already existing scene. This changes that representation to a Node
          * network so path finding algorithms can work more efficiently
+         * @param shapes - the vector of shapes that is used to create the navmesh
          */
         Navmesh(std::vector<Shape> shapes);
 

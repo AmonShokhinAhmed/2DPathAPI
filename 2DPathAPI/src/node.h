@@ -10,8 +10,14 @@ namespace PathAPI {
     class Node {
       public:
         /// Getter for the node's id.
+        /**
+         * @return the id
+         */
         int GetId();
         /// Getter for the node's connections
+        /**
+         * @return the connections
+         */
         const std::vector<uint32_t> &GetConnections();
 
       private:
@@ -25,6 +31,9 @@ namespace PathAPI {
         /**
          * This constructor should only ever be called from PathFinder::AddNode, because creating a
          * node in a vacuum does not make sense
+         * @param[in] position - the position of the node in the scene
+         * @param[in] connections - the connections the node has
+         * @param[in] id - the id of the node
          */
         Node(const Vector2 &position, const std::vector<uint32_t> &connections, uint32_t id);
 

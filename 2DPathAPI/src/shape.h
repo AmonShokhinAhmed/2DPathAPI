@@ -22,12 +22,22 @@ namespace PathAPI {
          * This will define the shape considering pixel as empty when they are either white or the
          * alpha channel value is zero. White pixels can also be considered filled if the
          * whiteAsAlpha flag is turned to false
+         * @param[in] path - Path to the image file
+         * @param[in] whiteAsAlpha - true if white pixel should be considered empty
          */
         Shape(const std::string &path, bool whiteAsAlpha = true);
         /// Constructor that allows the user to manually define the shapes vertices
+        /**
+         * @param[in] vertices - the vertices the shape consists of. Every three indices denote on
+         * triangle, so only a vector with a size of a multiple of three will be valid. If it is
+         * invalid the Shape will just ignore the last 1 or 2 indices.
+         */
         Shape(const std::vector<Vector2> &vertices);
 
         /// Getter to the stored vertices
+        /**
+         * @return a reference vector containing it's vertices
+         */
         const std::vector<Vector2> &GetVertices();
 
       private:

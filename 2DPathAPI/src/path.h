@@ -6,7 +6,8 @@ namespace PathAPI {
       public:
         /// Gets the next position on the path.
         /**
-         * @param[in] stepSize - how far we want to travel (can also be negative)
+         * @param[in] stepSize - how far we want to travel (can also be negative) from the previous
+         * position
          * @param[out] endofPath - true when we reached the end of the path
          * @return the position we traveled to
          */
@@ -16,6 +17,7 @@ namespace PathAPI {
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
          * the beginning of the path while 1 corresponds to the end. This value is clamped between 0
          * and 1.
+         * @return the queried position
          */
         Vector2 GetPositionOnPath(float position);
         /// Sets the current position on the path to the normalized position value
@@ -34,6 +36,7 @@ namespace PathAPI {
          * know about, they should only feature points where the path changes direction, as every
          * other point can be interpolated.
          * This is private because only Pathfinder needs to be able to create a Path.
+         * @param[in] positions - the positions the path consists of
          */
         Path(const std::vector<Vector2> &positions);
         /// index of the current position in the positions vector

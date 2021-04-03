@@ -12,6 +12,11 @@ namespace PathAPI {
         /// Default constructor, initilazing Position to (0,0), Scale to (1,1) and Rotation to 0;
         Transform();
         /// Constructor taking already definied Positon, Scale and Rotation
+        /**
+         * @param[in] position - the value Position will be set to
+         * @param[in] scale - the value Scale will be set to
+         * @param[in] rotation - the value Rotation will be set to
+         */
         Transform(const Vector2 &position, const Vector2 &scale, float rotation);
         /// Position of the object
         Vector2 Position;

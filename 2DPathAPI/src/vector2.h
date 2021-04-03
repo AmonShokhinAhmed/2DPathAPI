@@ -8,8 +8,15 @@ namespace PathAPI {
     class Vector2 {
       public:
         /// Constructor using it's coordinates
+        /**
+         * @param[in] x - The value the x coordinate will be set to.
+         * @param[in] y - The value the y coordinate will be set to.
+         */
         Vector2(float x, float y);
         /// Constructor setting both coordinates to the same value
+        /**
+         * @param[in] value - The value both coordinates will be set to.
+         */
         Vector2(float value);
         /// Default constructor, intializes both coordinates to zero
         Vector2();
