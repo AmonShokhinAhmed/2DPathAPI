@@ -7,6 +7,7 @@ namespace PathAPI {
     class Navmesh {
       public:
         Navmesh();
+        Navmesh(const Navmesh &other);
         Navmesh(std::vector<Shape> shapes);
         /// Adding a node to the navmesh's current map.
         /**
