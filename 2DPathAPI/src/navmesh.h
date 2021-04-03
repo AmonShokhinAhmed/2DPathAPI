@@ -10,8 +10,9 @@ namespace PathAPI {
         Navmesh(std::vector<Shape> shapes);
         /// Adding a node to the navmesh's current map.
         /**
-         * This is the only way a node can be created. Because creating a node in a vacuum does not
-         * make any sense. It also ensures that the node gets the correct id value.
+         * This is the only way a node can be "manually" created by the user. Because creating a
+         * node in a vacuum does not make any sense. It also ensures that the node gets the correct
+         * id value.
          */
         Node *AddNode(Vector2 position, const std::vector<uint32_t> &connections);
 

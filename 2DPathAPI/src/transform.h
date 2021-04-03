@@ -9,6 +9,10 @@ namespace PathAPI {
     /// \todo Add utility functions
     class Transform {
       public:
+        /// Default constructor, initilazing Position to (0,0), Scale to (1,1) and Rotation to 0;
+        Transform();
+        /// Constructor taking already definied Positon, Scale and Rotation
+        Transform(const Vector2 &position, const Vector2 &scale, float rotation);
         /// Position of the object
         Vector2 Position;
         /// Scale of the object
