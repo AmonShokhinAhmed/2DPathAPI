@@ -8,20 +8,22 @@ namespace PathAPI {
         /// Gets the next position on the path.
         /**
          * @param[in] stepSize - how far we want to travel (can also be negative)
-         * @param[out] nextPosition - the position we traveled to on the path
-         * @return whether we reached the end of the path
+         * @param[out] endofPath - true when we reached the end of the path
+         * @return the position we traveled to
          */
-        bool GetNextPosition(float stepSize, Vector2 &nextPosition);
+        Vector2 GetNextPosition(float stepSize, bool &endofPath);
         /// Gets the position on the path determined by the normalized position value
         /**
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
-         * the beginning of the path while 1 corresponds to the end.
+         * the beginning of the path while 1 corresponds to the end. This value is clamped between 0
+         * and 1.
          */
         Vector2 GetPositionOnPath(float position);
         /// Sets the current position on the path to the normalized position value
         /**
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
-         * the beginning of the path while 1 corresponds to the end.
+         * the beginning of the path while 1 corresponds to the end. This value is clamped between 0
+         * and 1.
          */
         void SetCurrentPosition(float position);
 
