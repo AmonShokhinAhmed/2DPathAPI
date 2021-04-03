@@ -7,9 +7,9 @@ namespace PathAPI {
     /// Shape class, storing a list of vectors to define a 2D shape.
     /**
      * This is the most basic way to represent an object. It consists of the a list of Vector2
-     * objects, that defines a basic shape. That shape can be altered by manipulating the Transform
-     * member variable. In addition the Walkable flag can be used to define if the shape should be
-     * part of the walkable terrain, when using it to create a Navmesh
+     * objects (forming triangles), that defines a basic shape. That shape can be altered by
+     * manipulating the Transform member variable. In addition the Walkable flag can be used to
+     * define if the shape should be part of the walkable terrain, when using it to create a Navmesh
      */
     class Shape {
       public:
@@ -26,6 +26,9 @@ namespace PathAPI {
         Shape(std::string path, bool whiteAsAlpha = true);
         /// Constructor that allows the user to manually define the shapes vertices
         Shape(std::vector<Vector2> vertices);
+
+        /// Getter to the stored vertices
+        const std::vector<Vector2> &GetVertices();
 
       private:
         std::vector<Vector2> vertices;
