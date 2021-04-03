@@ -7,7 +7,6 @@ namespace PathAPI {
      * manipulate those values.
      */
     /// \todo Add utility functions
-    /// \todo Rule of 5
     class Transform {
       public:
         /// Default constructor, initilazing Position to (0,0), Scale to (1,1) and Rotation to 0;
