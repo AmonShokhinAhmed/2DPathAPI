@@ -2,7 +2,6 @@
 #include "navmesh.h"
 #include "path.h"
 #include <vector>
-/// The namespace for the whole 2DPathAPI project.
 namespace PathAPI {
     class Node;
     /// The heart of the PathAPI, that should find the path for the user.

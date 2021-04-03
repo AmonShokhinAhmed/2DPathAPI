@@ -1,7 +1,6 @@
 #pragma once
 #include "node.h"
 #include <vector>
-/// The namespace for the whole 2DPathAPI project.
 namespace PathAPI {
     class Path {
       public:
