@@ -23,9 +23,9 @@ namespace PathAPI {
          * alpha channel value is zero. White pixels can also be considered filled if the
          * whiteAsAlpha flag is turned to false
          */
-        Shape(std::string path, bool whiteAsAlpha = true);
+        Shape(const std::string &path, bool whiteAsAlpha = true);
         /// Constructor that allows the user to manually define the shapes vertices
-        Shape(std::vector<Vector2> vertices);
+        Shape(const std::vector<Vector2> &vertices);
 
         /// Getter to the stored vertices
         const std::vector<Vector2> &GetVertices();
