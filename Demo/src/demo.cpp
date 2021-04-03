@@ -1,5 +1,4 @@
-#include "navmesh.h"
-#include "pathfinder.h"
+#include "pathapi.h"
 #include <iostream>
 int main() {
     // Manually creating a node network should be possible:
