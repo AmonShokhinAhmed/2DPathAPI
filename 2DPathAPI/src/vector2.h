@@ -5,6 +5,7 @@ namespace PathAPI {
      * Stores x and y coordinates. Allows simple use of vector math.
      */
     /// \todo Math operations
+    /// \todo Rule of 5
     class Vector2 {
       public:
         /// Constructor using it's coordinates
