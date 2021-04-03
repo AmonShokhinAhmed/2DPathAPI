@@ -51,6 +51,11 @@ namespace PathAPI {
         Path FindOptimizedPath(const std::vector<Vector2> &, bool &pathFound);
 
       private:
+        /// function is used by all Find*Path methods to create the path.
+        /**
+         * This is a friend function of path, so we can access the private constructor
+         */
+        Path createPath(const std::vector<Vector2> &positions);
         /// The navmesh the pathfinder uses
         const Navmesh Navmesh;
     };

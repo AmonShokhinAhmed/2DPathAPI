@@ -5,14 +5,6 @@
 namespace PathAPI {
     class Path {
       public:
-        /// Constructor building the path from an ordered list of positions
-        /**
-         * The passed vector has to have it's position in the orderer we want the path to be
-         * travelled in. As the positions can't contain every possible step the user would want to
-         * know about, they should only feature points where the path changes direction, as every
-         * other point can be interpolated
-         */
-        Path(const std::vector<Vector2> &positions);
         /// Gets the next position on the path.
         /**
          * @param[in] stepSize - how far we want to travel (can also be negative)
@@ -34,11 +26,23 @@ namespace PathAPI {
         void SetCurrentPosition(float position);
 
       private:
+        /// Constructor building the path from an ordered list of positions
+        /**
+         * The passed vector has to have it's position in the orderer we want the path to be
+         * travelled in. As the positions can't contain every possible step the user would want to
+         * know about, they should only feature points where the path changes direction, as every
+         * other point can be interpolated.
+         * This is private because only Pathfinder needs to be able to create a Path.
+         */
+        Path(const std::vector<Vector2> &positions);
         /// index of the current position in the positions vector
         int currentPosition;
         /// distance we have currently travelled between currentPosition and the following index
         float distanceTraveled;
         /// stores the positions the path consists of
         std::vector<Vector2> positions;
+
+        // Declaring PathFinder::createPath as a friend so it has access to the private constructor
+        friend Path PathFinder::createPath(const std::vector<Vector2> &positions);
     };
 } // namespace PathAPI
