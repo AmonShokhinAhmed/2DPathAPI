@@ -25,13 +25,13 @@ namespace PathAPI {
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
          * the beginning of the path while 1 corresponds to the end.
          */
-        GetPositionOnPath(float position);
+        Vector2 GetPositionOnPath(float position);
         /// Sets the current position on the path to the normalized position value
         /**
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
          * the beginning of the path while 1 corresponds to the end.
          */
-        SetCurrentPosition(float position);
+        void SetCurrentPosition(float position);
 
       private:
         /// index of the current position in the positions vector
