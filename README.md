@@ -15,4 +15,4 @@ Documentation can be found on corresponding [GitHub Pages site](https://amonshok
 
 ~~Which all in all was pretty useless without actually implementing the API.~~
 
-Moved most of the technologies I tried out in this project to an extra [Example Project](https://github.com/AmonShokhinAhmed/CPPToolingExample)
+I moved most of the technologies I tried out in this project to an extra [Example Project](https://github.com/AmonShokhinAhmed/CPPToolingExample).
