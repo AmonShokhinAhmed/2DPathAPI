@@ -12,6 +12,19 @@ namespace PathAPI {
          * @return the position we traveled to
          */
         Vector2 GetNextPosition(float stepSize, bool &endofPath);
+        /// Gets the current position on the path
+        /**
+         * @return returns the current position on the path, determined by the distance travelled
+         * using GetNextPosition
+         */
+        Vector2 GetCurrentPosition();
+        /// Gets the current normalized position value on the path
+        /**
+         * @return returns the current normalized position on the path, determined by the distance
+         * travelled using GetNextPosition. The value is between 0 and 1, where 0 is the start of
+         * the path and 1 the end.
+         */
+        float GetCurrentNormalizedPosition();
         /// Gets the position on the path determined by the normalized position value
         /**
          * @param[in] position - the normalized position value. This means that a value of 0 denotes
