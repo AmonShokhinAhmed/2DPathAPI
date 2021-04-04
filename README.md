@@ -7,10 +7,10 @@
 Documentation can be found on corresponding [GitHub Pages site](https://amonshokhinahmed.github.io/2DPathAPI/). 
 
 ## Further Notes
-Also served as testing ground to try out different technologies like:
+~~Also served as testing ground to try out different technologies like:
 - Catch2 
 - Cmake
 - Doxygen
 - Github Actions
 
-Which all in all was pretty useless without actually implementing the API.
+Which all in all was pretty useless without actually implementing the API.~~

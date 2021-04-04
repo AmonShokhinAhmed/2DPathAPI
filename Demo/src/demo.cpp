@@ -6,7 +6,7 @@ void testPath(PathAPI::Path &path) {
 }
 int main() {
     // Manually creating a node network should be possible:
-    /*{
+    {
         PathAPI::Navmesh navmesh;
         createRandomNavmesh(navmesh);
         PathAPI::PathFinder pathfinder(navmesh);
@@ -35,5 +35,5 @@ int main() {
         PathAPI::Path optimizedPath = pathfinder.FindOptimizedPath(start, end, pathFound);
         testPath(fastPath);
         testPath(optimizedPath);
-    }*/
+    }
 }
