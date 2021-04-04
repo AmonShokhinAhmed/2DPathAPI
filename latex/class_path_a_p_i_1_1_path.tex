@@ -5,6 +5,10 @@
 \item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}{Get\+Next\+Position}} (float step\+Size, bool \&endof\+Path)
 \begin{DoxyCompactList}\small\item\em Gets the next position on the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_a628544d99378be9fa2cca64d6f32e1c3}{Get\+Current\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current position on the path. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_path_a_p_i_1_1_path_a88febe9f5b8f9b09c4b56c15bfc62a51}{Get\+Current\+Normalized\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current normalized position value on the path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_path_a_p_i_1_1_path_a398cd8df20e9b4f18005a05aa2e95476}{Get\+Position\+On\+Path}} (float position)
 \begin{DoxyCompactList}\small\item\em Gets the position on the path determined by the normalized position value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_path_a_p_i_1_1_path_a2c3eb4c1b917ac0821fd4cc4f271e745}{Set\+Current\+Position}} (float position)
@@ -47,6 +51,32 @@ The passed vector has to have it\textquotesingle{}s position in the orderer we w
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a88febe9f5b8f9b09c4b56c15bfc62a51}\label{class_path_a_p_i_1_1_path_a88febe9f5b8f9b09c4b56c15bfc62a51}} 
+\index{PathAPI::Path@{PathAPI::Path}!GetCurrentNormalizedPosition@{GetCurrentNormalizedPosition}}
+\index{GetCurrentNormalizedPosition@{GetCurrentNormalizedPosition}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{GetCurrentNormalizedPosition()}{GetCurrentNormalizedPosition()}}
+{\footnotesize\ttfamily float Path\+API\+::\+Path\+::\+Get\+Current\+Normalized\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current normalized position value on the path. 
+
+\begin{DoxyReturn}{Returns}
+returns the current normalized position on the path, determined by the distance travelled using Get\+Next\+Position. The value is between 0 and 1, where 0 is the start of the path and 1 the end. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_path_a_p_i_1_1_path_a628544d99378be9fa2cca64d6f32e1c3}\label{class_path_a_p_i_1_1_path_a628544d99378be9fa2cca64d6f32e1c3}} 
+\index{PathAPI::Path@{PathAPI::Path}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!PathAPI::Path@{PathAPI::Path}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} Path\+API\+::\+Path\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current position on the path. 
+
+\begin{DoxyReturn}{Returns}
+returns the current position on the path, determined by the distance travelled using Get\+Next\+Position 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}\label{class_path_a_p_i_1_1_path_a972953fbdb25d2960a1df18e6b579e06}} 
 \index{PathAPI::Path@{PathAPI::Path}!GetNextPosition@{GetNextPosition}}
 \index{GetNextPosition@{GetNextPosition}!PathAPI::Path@{PathAPI::Path}}
@@ -61,7 +91,7 @@ Gets the next position on the path.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em step\+Size} & -\/ how far we want to travel (can also be negative) from the previous position \\
 \hline
-\mbox{\texttt{ out}}  & {\em endof\+Path} & -\/ true when we reached the end of the path \\
+\mbox{\texttt{ out}}  & {\em endof\+Path} & -\/ true when we reached the end of the path (meaning either end or start of path depending on the sign of step\+Size) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

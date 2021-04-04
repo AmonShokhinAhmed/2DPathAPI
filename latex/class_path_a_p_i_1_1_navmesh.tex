@@ -5,9 +5,11 @@
 \item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}{Navmesh}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a388bdf95aea6e77320852e094f1c3e7d}{Navmesh}} (const std\+::string \&nodes)
+\begin{DoxyCompactList}\small\item\em Constructor using a file detailing the relevant nodes. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}{Navmesh}} (const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&other)
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}{Navmesh}} (std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $>$ shapes)
+\mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a00c9deca06502ad770c1566c43bca124}{Navmesh}} (const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $\ast$ $>$ \&shapes)
 \begin{DoxyCompactList}\small\item\em Constructor using a vector of shapes to create the navmesh. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh_a30af6fa9b7bc26820bf855280ab093fe}{Add\+Node}} (\mbox{\hyperlink{class_path_a_p_i_1_1_vector2}{Vector2}} position, const std\+::vector$<$ uint32\+\_\+t $>$ \&connections)
 \begin{DoxyCompactList}\small\item\em Adding a node to the navmesh\textquotesingle{}s current map. \end{DoxyCompactList}\item 
@@ -30,17 +32,40 @@ std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} $\ast$ $>$ \
 \mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}\label{class_path_a_p_i_1_1_navmesh_a13b70e8cd73873b1ae3a8aeb71557e46}} 
 \index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
 \index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
-\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Default constructor. 
 
-As this does not yet create a \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} network representing the scene, no path can be found. This means this Constructor only makes sense when manually adding Nodes with the Add\+Node function. This is intended as it provides the User with more flexibility. \mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}\label{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}} 
+As this does not yet create a \mbox{\hyperlink{class_path_a_p_i_1_1_node}{Node}} network representing the scene, no path can be found. This means this Constructor only makes sense when manually adding Nodes with the Add\+Node function. This is intended as it provides the User with more flexibility. \mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a388bdf95aea6e77320852e094f1c3e7d}\label{class_path_a_p_i_1_1_navmesh_a388bdf95aea6e77320852e094f1c3e7d}} 
 \index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
 \index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
-\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Constructor using a file detailing the relevant nodes. 
+
+This Constructor takes in a file that contains information of the nodes the navmesh should contain. Each line in the file describes one node and has to be of format\+: $<$x-\/coordinate$>$ $<$y-\/corrdinate$>$ $<$connection 1$>$ $<$connection 2$>$ .... $<$connection n$>$
+
+So if i want to create following navmesh (with connections beeing omnidirectional)\+: \begin{DoxyVerb}   (1,0)
+   /   \
+(0,1) (2,1)
+  |
+(0,2)
+\end{DoxyVerb}
+ My file has to look as followed\+: \begin{DoxyVerb}1 0 1 2
+0 1 0 2
+2 1 0
+0 2 1
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}\label{class_path_a_p_i_1_1_navmesh_a8cfbed2bdb9db7f02b7ef31db272aae0}} 
+\index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
+\index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_path_a_p_i_1_1_navmesh}{Navmesh}} \&}]{other }\end{DoxyParamCaption})}
 
 
@@ -52,11 +77,11 @@ Copy constructor.
 {\em other} & -\/ the navmesh we want to copy \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}\label{class_path_a_p_i_1_1_navmesh_a8b307433304620637db75a33ae84a2d3}} 
+\mbox{\Hypertarget{class_path_a_p_i_1_1_navmesh_a00c9deca06502ad770c1566c43bca124}\label{class_path_a_p_i_1_1_navmesh_a00c9deca06502ad770c1566c43bca124}} 
 \index{PathAPI::Navmesh@{PathAPI::Navmesh}!Navmesh@{Navmesh}}
 \index{Navmesh@{Navmesh}!PathAPI::Navmesh@{PathAPI::Navmesh}}
-\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $>$}]{shapes }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Navmesh()}{Navmesh()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Path\+API\+::\+Navmesh\+::\+Navmesh (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_path_a_p_i_1_1_shape}{Shape}} $\ast$ $>$ \&}]{shapes }\end{DoxyParamCaption})}
 
 
 

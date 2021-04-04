@@ -81,6 +81,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a972953fbdb25d2960a1df18e6b579e06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path.html#a972953fbdb25d2960a1df18e6b579e06">GetNextPosition</a> (float stepSize, bool &amp;endofPath)</td></tr>
 <tr class="memdesc:a972953fbdb25d2960a1df18e6b579e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next position on the path.  <a href="class_path_a_p_i_1_1_path.html#a972953fbdb25d2960a1df18e6b579e06">More...</a><br /></td></tr>
 <tr class="separator:a972953fbdb25d2960a1df18e6b579e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628544d99378be9fa2cca64d6f32e1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path.html#a628544d99378be9fa2cca64d6f32e1c3">GetCurrentPosition</a> ()</td></tr>
+<tr class="memdesc:a628544d99378be9fa2cca64d6f32e1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current position on the path.  <a href="class_path_a_p_i_1_1_path.html#a628544d99378be9fa2cca64d6f32e1c3">More...</a><br /></td></tr>
+<tr class="separator:a628544d99378be9fa2cca64d6f32e1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88febe9f5b8f9b09c4b56c15bfc62a51"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path.html#a88febe9f5b8f9b09c4b56c15bfc62a51">GetCurrentNormalizedPosition</a> ()</td></tr>
+<tr class="memdesc:a88febe9f5b8f9b09c4b56c15bfc62a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current normalized position value on the path.  <a href="class_path_a_p_i_1_1_path.html#a88febe9f5b8f9b09c4b56c15bfc62a51">More...</a><br /></td></tr>
+<tr class="separator:a88febe9f5b8f9b09c4b56c15bfc62a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a398cd8df20e9b4f18005a05aa2e95476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_path.html#a398cd8df20e9b4f18005a05aa2e95476">GetPositionOnPath</a> (float position)</td></tr>
 <tr class="memdesc:a398cd8df20e9b4f18005a05aa2e95476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position on the path determined by the normalized position value.  <a href="class_path_a_p_i_1_1_path.html#a398cd8df20e9b4f18005a05aa2e95476">More...</a><br /></td></tr>
 <tr class="separator:a398cd8df20e9b4f18005a05aa2e95476"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +151,46 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a88febe9f5b8f9b09c4b56c15bfc62a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88febe9f5b8f9b09c4b56c15bfc62a51">&#9670;&nbsp;</a></span>GetCurrentNormalizedPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PathAPI::Path::GetCurrentNormalizedPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current normalized position value on the path. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns the current normalized position on the path, determined by the distance travelled using GetNextPosition. The value is between 0 and 1, where 0 is the start of the path and 1 the end. </dd></dl>
+
+</div>
+</div>
+<a id="a628544d99378be9fa2cca64d6f32e1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628544d99378be9fa2cca64d6f32e1c3">&#9670;&nbsp;</a></span>GetCurrentPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</a> PathAPI::Path::GetCurrentPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current position on the path. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns the current position on the path, determined by the distance travelled using GetNextPosition </dd></dl>
+
+</div>
+</div>
 <a id="a972953fbdb25d2960a1df18e6b579e06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a972953fbdb25d2960a1df18e6b579e06">&#9670;&nbsp;</a></span>GetNextPosition()</h2>
 
@@ -175,7 +221,7 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">stepSize</td><td>- how far we want to travel (can also be negative) from the previous position </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">endofPath</td><td>- true when we reached the end of the path </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">endofPath</td><td>- true when we reached the end of the path (meaning either end or start of path depending on the sign of stepSize) </td></tr>
   </table>
   </dd>
 </dl>
