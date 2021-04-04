@@ -1,5 +1,5 @@
 # 2DPathAPI
-**2DPathAPI** was made for my *Game Engine Design* course and provides an outline for a simple path finding library. It is not intended to actually be implemented, but instead was only used to practice API Design. Because of this the project will obviously not configure/build/work. 
+**2DPathAPI** was made for my *Game Engine Design* course and provides an outline for a simple path finding library. It is not intended to actually be implemented, but instead was only used to practice API Design. Because of this the project **will obviously not configure/build/work**. 
 
 **Currently WIP**
 
