@@ -14,6 +14,29 @@ namespace PathAPI {
          * function. This is intended as it provides the User with more flexibility.
          */
         Navmesh();
+        /// Constructor using a file detailing the relevant nodes.
+        /**
+         * This Constructor takes in a file that contains information of the nodes the navmesh
+         * should contain. Each line in the file describes one node and has to be of format:
+         * <x-coordinate> <y-corrdinate> <connection 1> <connection 2> .... <connection n>
+         *
+         * So if i want to create following navmesh (with connections beeing omnidirectional):
+         * @verbatim
+             (1,0)
+             /   \
+          (0,1) (2,1)
+            |
+          (0,2)
+          @endverbatim
+         * My file has to look as followed:
+         * @verbatim
+          1 0 1 2
+          0 1 0 2
+          2 1 0
+          0 2 1
+          @endverbatim
+         */
+        Navmesh(std::string nodes);
         /// Copy constructor
         /**
          * @param other - the navmesh we want to copy
