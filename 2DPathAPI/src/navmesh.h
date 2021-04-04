@@ -36,7 +36,7 @@ namespace PathAPI {
           0 2 1
           @endverbatim
          */
-        Navmesh(std::string nodes);
+        Navmesh(const std::string &nodes);
         /// Copy constructor
         /**
          * @param other - the navmesh we want to copy
@@ -49,7 +49,7 @@ namespace PathAPI {
          * network so path finding algorithms can work more efficiently
          * @param shapes - the vector of shapes that is used to create the navmesh
          */
-        Navmesh(std::vector<Shape> shapes);
+        Navmesh(const std::vector<Shape *> &shapes);
 
         /// Adding a node to the navmesh's current map.
         /**

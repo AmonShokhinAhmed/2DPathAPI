@@ -8,7 +8,8 @@ namespace PathAPI {
         /**
          * @param[in] stepSize - how far we want to travel (can also be negative) from the previous
          * position
-         * @param[out] endofPath - true when we reached the end of the path
+         * @param[out] endofPath - true when we reached the end of the path (meaning either end or
+         * start of path depending on the sign of stepSize)
          * @return the position we traveled to
          */
         Vector2 GetNextPosition(float stepSize, bool &endofPath);

@@ -14,8 +14,9 @@ namespace PathAPI {
         /**
          * The only way the pathfinder makes sense in combination with a navmesh so no other
          * constructor is available.
+         * @param[in] navmesh - the navmesh the pathfinder will use
          */
-        PathFinder(const Navmesh &navmesh);
+        PathFinder(Navmesh *navmesh);
         /// Finds a path as fast as possible
         /**
          * @param[in] start - Start position of the path
@@ -56,6 +57,6 @@ namespace PathAPI {
          */
         Path createPath(const std::vector<Vector2> &positions);
         /// The navmesh the pathfinder uses
-        const Navmesh Navmesh;
+        Navmesh *navmesh;
     };
 } // namespace PathAPI
