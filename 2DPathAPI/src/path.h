@@ -2,6 +2,10 @@
 #include "node.h"
 #include <vector>
 namespace PathAPI {
+    /// Class that stores a path found by the PathFinder class.
+    /**
+     * Allows the user to interact with the path using bunch of utility functions.
+     */
     class Path {
       public:
         /// Gets the next position on the path.

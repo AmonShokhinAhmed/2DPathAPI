@@ -4,7 +4,11 @@
 #include "shape.h"
 #include <vector>
 namespace PathAPI {
-
+    /// Class that stores traversable terrain in a format usable by the PathAPI
+    /**
+     * Mainly functions as a converter for other scene formats, but also allows the user to manually
+     * design a position network.
+     */
     class Navmesh {
       public:
         /// Default constructor
