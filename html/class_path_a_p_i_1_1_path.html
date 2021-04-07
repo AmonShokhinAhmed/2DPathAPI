@@ -75,6 +75,11 @@ $(function() {
 <div class="title">PathAPI::Path Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class that stores a path found by the <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI that should find the path for the user.">PathFinder</a> class.  
+ <a href="class_path_a_p_i_1_1_path.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="path_8h_source.html">path.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,7 +120,10 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</
 <tr class="memdesc:ae9cc5c22e65cf95fc371594a01161ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the positions the path consists of <br /></td></tr>
 <tr class="separator:ae9cc5c22e65cf95fc371594a01161ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that stores a path found by the <a class="el" href="class_path_a_p_i_1_1_path_finder.html" title="The heart of the PathAPI that should find the path for the user.">PathFinder</a> class. </p>
+<p>Allows the user to interact with the path using bunch of utility functions. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5c7fd0934b74480a41be816cfc94bb5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c7fd0934b74480a41be816cfc94bb5b">&#9670;&nbsp;</a></span>Path()</h2>
 
@@ -141,7 +149,7 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_vector2.html">Vector2</
 </div><div class="memdoc">
 
 <p>Constructor building the path from an ordered list of positions. </p>
-<p>The passed vector has to have it's position in the orderer we want the path to be travelled in. As the positions can't contain every possible step the user would want to know about, they should only feature points where the path changes direction, as every other point can be interpolated. This is private because only Pathfinder needs to be able to create a <a class="el" href="class_path_a_p_i_1_1_path.html">Path</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The passed vector has to have it's position in the orderer we want the path to be travelled in. As the positions can't contain every possible step the user would want to know about, they should only feature points where the path changes direction, as every other point can be interpolated. This is private because only Pathfinder needs to be able to create a <a class="el" href="class_path_a_p_i_1_1_path.html" title="Class that stores a path found by the PathFinder class.">Path</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">positions</td><td>- the positions the path consists of </td></tr>
   </table>

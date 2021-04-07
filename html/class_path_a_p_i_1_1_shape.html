@@ -96,7 +96,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a99cc3728afda05ceb860a2ddd26a9ba8"><td class="memItemLeft" align="right" valign="top"><a id="a99cc3728afda05ceb860a2ddd26a9ba8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_shape.html#a99cc3728afda05ceb860a2ddd26a9ba8">Walkable</a> = false</td></tr>
-<tr class="memdesc:a99cc3728afda05ceb860a2ddd26a9ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to define the shape as walkable for potential <a class="el" href="class_path_a_p_i_1_1_navmesh.html">Navmesh</a> creation. <br /></td></tr>
+<tr class="memdesc:a99cc3728afda05ceb860a2ddd26a9ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to define the shape as walkable for potential <a class="el" href="class_path_a_p_i_1_1_navmesh.html" title="Class that stores traversable terrain in a format usable by the PathAPI.">Navmesh</a> creation. <br /></td></tr>
 <tr class="separator:a99cc3728afda05ceb860a2ddd26a9ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13b641bee920cc56a3e0e633d367fdc2"><td class="memItemLeft" align="right" valign="top"><a id="a13b641bee920cc56a3e0e633d367fdc2"></a>
 <a class="el" href="class_path_a_p_i_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_path_a_p_i_1_1_shape.html#a13b641bee920cc56a3e0e633d367fdc2">Transform</a></td></tr>
@@ -105,7 +105,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_path_a_p_i_1_1_shape.html" title="Shape class, storing a list of vectors to define a 2D shape.">Shape</a> class, storing a list of vectors to define a 2D shape. </p>
-<p>This is the most basic way to represent an object. It consists of the a list of <a class="el" href="class_path_a_p_i_1_1_vector2.html" title="Simple two dimensional vector class.">Vector2</a> objects (forming triangles), that defines a basic shape. That shape can be altered by manipulating the <a class="el" href="class_path_a_p_i_1_1_transform.html" title="Transform class for use with every object in a scene.">Transform</a> member variable. In addition the Walkable flag can be used to define if the shape should be part of the walkable terrain, when using it to create a <a class="el" href="class_path_a_p_i_1_1_navmesh.html">Navmesh</a> </p>
+<p>This is the most basic way to represent an object. It consists of the a list of <a class="el" href="class_path_a_p_i_1_1_vector2.html" title="Simple two dimensional vector class.">Vector2</a> objects (forming triangles), that defines a basic shape. That shape can be altered by manipulating the <a class="el" href="class_path_a_p_i_1_1_transform.html" title="Transform class for use with every object in a scene.">Transform</a> member variable. In addition the Walkable flag can be used to define if the shape should be part of the walkable terrain, when using it to create a <a class="el" href="class_path_a_p_i_1_1_navmesh.html" title="Class that stores traversable terrain in a format usable by the PathAPI.">Navmesh</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6db589c81a1411773b1c9cd30073d580"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6db589c81a1411773b1c9cd30073d580">&#9670;&nbsp;</a></span>Shape() <span class="overload">[1/2]</span></h2>
@@ -136,7 +136,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Constructor using a path to load a image file from disc to define the shape. </p>
 <p>This will define the shape considering pixel as empty when they are either white or the alpha channel value is zero. White pixels can also be considered filled if the whiteAsAlpha flag is turned to false </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- <a class="el" href="class_path_a_p_i_1_1_path.html">Path</a> to the image file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- <a class="el" href="class_path_a_p_i_1_1_path.html" title="Class that stores a path found by the PathFinder class.">Path</a> to the image file </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">whiteAsAlpha</td><td>- true if white pixel should be considered empty </td></tr>
   </table>
   </dd>

@@ -74,6 +74,11 @@ $(function() {
 <div class="title">PathAPI::Navmesh Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class that stores traversable terrain in a format usable by the <a class="el" href="namespace_path_a_p_i.html" title="The namespace for the whole 2DPathAPI project.">PathAPI</a>.  
+ <a href="class_path_a_p_i_1_1_navmesh.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="navmesh_8h_source.html">navmesh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -110,7 +115,10 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> * &
 <tr class="memdesc:a41c259bdffa2869ea1adb2ede5970127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector containing all nodes. <br /></td></tr>
 <tr class="separator:a41c259bdffa2869ea1adb2ede5970127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that stores traversable terrain in a format usable by the <a class="el" href="namespace_path_a_p_i.html" title="The namespace for the whole 2DPathAPI project.">PathAPI</a>. </p>
+<p>Mainly functions as a converter for other scene formats, but also allows the user to manually design a position network. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a13b70e8cd73873b1ae3a8aeb71557e46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13b70e8cd73873b1ae3a8aeb71557e46">&#9670;&nbsp;</a></span>Navmesh() <span class="overload">[1/4]</span></h2>
 
@@ -204,7 +212,7 @@ std::vector&lt; <a class="el" href="class_path_a_p_i_1_1_node.html">Node</a> * &
 </div><div class="memdoc">
 
 <p>Constructor using a vector of shapes to create the navmesh. </p>
-<p>Using shapes flagged as walkable or not it is possible to create the <a class="el" href="class_path_a_p_i_1_1_navmesh.html">Navmesh</a> pretty intuitively from an already existing scene. This changes that representation to a <a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> network so path finding algorithms can work more efficiently </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Using shapes flagged as walkable or not it is possible to create the <a class="el" href="class_path_a_p_i_1_1_navmesh.html" title="Class that stores traversable terrain in a format usable by the PathAPI.">Navmesh</a> pretty intuitively from an already existing scene. This changes that representation to a <a class="el" href="class_path_a_p_i_1_1_node.html" title="Node class for use by the PathFinder class.">Node</a> network so path finding algorithms can work more efficiently </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">shapes</td><td>- the vector of shapes that is used to create the navmesh </td></tr>
   </table>
