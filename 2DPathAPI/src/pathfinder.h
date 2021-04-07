@@ -4,7 +4,7 @@
 #include <vector>
 namespace PathAPI {
     class Node;
-    /// The heart of the PathAPI, that should find the path for the user.
+    /// The heart of the PathAPI that should find the path for the user.
     /**
      * This class handles the pathfinding. To do that it uses a user created navmesh.
      */
@@ -48,7 +48,7 @@ namespace PathAPI {
          * @param[out] pathFound - returns false if no possible path was found
          * @return A Path object, that allows the user use the found path.
          */
-        Path FindOptimizedPath(const std::vector<Vector2> &, bool &pathFound);
+        Path FindOptimizedPath(const std::vector<Vector2> & positions, bool &pathFound);
 
       private:
         /// function is used by all Find*Path methods to create the path.
